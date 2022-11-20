@@ -5,6 +5,7 @@ import React from "react";
 function App() {
   const [taskToAdd, setTaskToAdd] = React.useState();
   const [tasks, setTasks] = React.useState([{ content: '1', inEdit: false }, { content: '2', inEdit: false }]);
+  
 
   const startEditing = (id, task) => {
     return (
