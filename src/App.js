@@ -11,6 +11,7 @@ function App() {
     return (
       <div key={id} >
         <input type="text"
+        
           defaultValue={task.content}
           onChange={(e) => {
             const find = tasks.slice();
