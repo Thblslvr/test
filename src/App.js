@@ -40,8 +40,10 @@ function App() {
         {tasks.map((task, id) => {
           return task.inEdit ? startEditing(id, task) : <div key={id} >{`${id + 1 + ') '}` + task.content}
             <button onClick={() => { setTasks(tasks.slice().filter((el, i, arr) => el !== arr[id])) }}>Del</button>
+            
             <button onClick={() => { const find = tasks.slice(); find[id].inEdit = true; setTasks(find); }} >Edit</button>
           </div>
+
         })}
         {/* <a
           className="App-link"
