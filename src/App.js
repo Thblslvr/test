@@ -11,7 +11,7 @@ function App() {
     return (
       <div key={id} >
         <input type="text"
-        
+
           defaultValue={task.content}
           onChange={(e) => {
             const find = tasks.slice();
@@ -35,7 +35,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <input onChange={(e) => { setTaskToAdd(e.target.value) }} />
+        <input           style={{display:'fixed', position:'fixed'}} onChange={(e) => { setTaskToAdd(e.target.value) }} />
         <button onClick={() => { setTasks(tasks.concat({ content: taskToAdd, inEdit: false })) }}>Add</button>
 
         {tasks.map((task, id) => {
